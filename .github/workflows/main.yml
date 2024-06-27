@@ -4,7 +4,7 @@ name: Push
 on:
   push:
     branches:
-      - auth
+      - vm
 
 permissions:
       id-token: write
