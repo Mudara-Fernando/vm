@@ -1,9 +1,9 @@
-output "resource_group_id" {
-  description = "The id of the resource group."
-  value       = azurerm_resource_group.wireappas-rg.id
+output "vm_id" {
+  description = "The ID of the VM"
+  value       = module.vm.vm_id
 }
 
-output "region" {
-  description = "The id of the resource group."
-  value       = azurerm_resource_group.wireappas-rg.id
+output "vm_public_ip" {
+  description = "The public IP address of the VM"
+  value       = module.vm.public_ip_address
 }
