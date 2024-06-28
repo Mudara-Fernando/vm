@@ -17,7 +17,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 source ~/.bashrc
 
 nvm install --lts
-
+nvm install 14
+nvm use 14
 sudo systemctl enable nginx
 
 sudo systemctl start nginx
@@ -25,7 +26,7 @@ sudo systemctl start nginx
 sudo cat > /etc/nginx/conf.d/api.conf <<EOF
 server {
     
-     listen 80 default_server;
+     listen 80;
      server_name api.wireapps.com;
 
      location / {
@@ -38,7 +39,7 @@ EOF
 
 sudo cat > /etc/nginx/conf.d/web.conf <<EOF
 server {
-     listen 80 default_server;
+     listen 80;
      server_name web.wireapps.com;
 
      location / {

@@ -14,11 +14,11 @@ fi
 
 npm i -g pm2
 
-cd /var/www
+cd /www
 
-git clone git@github.com:Mudara-Fernando/vm.git
+git clone https://github.com/Mudara-Fernando/vm.git
 
-cd vm
+cd /www/vm1/
 
 if [[ "$app_name" == "api" ]]; then
     cd api
@@ -30,5 +30,5 @@ fi
 if [[ "$app_name" == "web" ]]; then
     cd web
     npm i
-    PORT=5000 API_HOST="https://api.wireapps.com"  pm2 start npm --name "web" -- start
+    PORT=8080 API_HOST="https://api.wireapps.com"  pm2 start npm --name "web" -- start
 fi

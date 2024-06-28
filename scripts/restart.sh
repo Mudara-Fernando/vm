@@ -12,12 +12,12 @@ if [[ "$app_name" != "api" ]] && [[ "$app_name" != "web" ]]; then
     exit 1
 fi
 
-cd /var/www/vm
+cd /www/vm
 
 if [[ "$app_name" == "api" ]]; then
     PORT=5000 pm2 restart api
 fi
 
 if [[ "$app_name" == "web" ]]; then
-    PORT=8080 API_HOST="https://api.example.com" pm2 restart web
+    PORT=8080 API_HOST="https://api.wireapps.com" pm2 restart web
 fi
